@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Михаил Гилодо](https://up.htmlacademy.ru/htmlcss-individual/2/user/1488001).
-* Наставник: `Неизвестно`.
+* Наставник: [Виктория Никитина](https://htmlacademy.ru/profile/id1217273).
 
 ---
 
