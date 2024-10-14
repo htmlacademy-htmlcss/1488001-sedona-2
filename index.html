@@ -6,9 +6,9 @@
   </head>
   <body>
 
-    <header class="header">
+    <header class="header" data-test="header">
       <a href="#" class="logo-link">
-        <img src="#" alt="Логотип города Седона" class="logo">
+        <img src="images/logo.svg" alt="Логотип города Седона" class="logo-image" width="138" height="64">
       </a>
       <nav class="nav">
         <ul class="site-menu">
@@ -41,15 +41,15 @@
       </nav>
     </header>
 
-    <main class="main">
+    <main class="main" data-test="main">
       <h1 class="visually-hidden">Неофициальный сайт города Седона</h1>
 
-      <section class="hero">
+      <section class="hero" data-test="hero">
         <h2 class="visually-hidden">Приглашение посетить город</h2>
-        <img src="#" alt="Приглашение" class="hero-img">
+        <img src="images/welcome.svg" alt="Приглашение" class="hero-image" width="458" height="352">
       </section>
 
-      <section class="advantages">
+      <section class="advantages" data-test="advantages">
         <h2 class="visually-hidden">Причины посетить город</h2>
         <p class="advantages-text">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
         <p class="advantages-description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
@@ -57,7 +57,7 @@
           <li class="advantages-list-item">
             <h3 class="advantage-title">Настоящий городок</h3>
             <p class="advantage-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-            <img src="#" alt="Городок" class="advantage-img">
+            <img src="images/advantage-1.jpg" alt="Городок" class="advantage-image" width="800" height="385">
           </li>
           <li class="advantages-list-item">
             <h3 class="advantage-title">Небольшая площадь</h3>
@@ -74,12 +74,12 @@
           <li class="advantages-list-item">
             <h3 class="advantage-title">Там есть мост дьявола</h3>
             <p class="advantage-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-            <img src="#" alt="Мост дьявола" class="advantage-img">
+            <img src="images/advantage-2.jpg" alt="Мост дьявола" class="advantage-image"  width="800" height="385">
           </li>
         </ul>
       </section>
 
-      <section class="services">
+      <section class="services" data-test="services">
         <p class="services-text">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
         <p class="services-description">Опытный персонал и качественное обслуживание!</p>
         <ul class="services-list">
@@ -98,7 +98,7 @@
         </ul>
       </section>
 
-      <section class="search">
+      <section class="search" data-test="search">
         <p class="search-text">Заинтересовались?</p>
         <p class="search-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие
           предложения гостиниц в Седоне
@@ -106,17 +106,17 @@
         <a href="#" class="search-link">Поиск гостиницы в Седоне</a>
       </section>
 
-      <section class="subscribe">
+      <section class="subscribe" data-test="subscribe">
         <h2 class="visually-hidden">Подписка на почтовую рассылку</h2>
         <p class="subscribe-text">Подпишитесь на рассылку</p>
         <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form action="#" class="subscribe-form" method="post">
           <input type="text" class="subscribe-form-input" placeholder="Ваш email">
-          <button type="submit" class="subscribe-form-btn">Подписаться</button>
+          <button type="submit" class="subscribe-form-button">Подписаться</button>
         </form>
       </section>
 
-      <footer class="footer">
+      <footer class="footer" data-test="footer">
         <ul class="socials-list">
           <li class="socials-item">
             <a href="#" class="socials-item-link">
@@ -135,9 +135,7 @@
           </li>
         </ul>
         <a href="tel:+78128121212" class="phone">+7 (812) 812-12-12</a>
-        <a href="#" class="copyright">
-          <img src="#" alt="Логотип HTML Academy" class="copyright-img">
-        </a>
+        <a href="#" class="copyright"></a>
       </footer>
     </main>
   </body>
