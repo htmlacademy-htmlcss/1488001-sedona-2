@@ -90,6 +90,10 @@ img {
   background-color: #ffffff;
 }
 
+.user-menu-link {
+  text-decoration: none;
+}
+
 .fav-number {
   font-size: 10px;
   line-height: 10px;

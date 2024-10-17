@@ -117,7 +117,8 @@
         <p class="subscribe-text">Подпишитесь на рассылку</p>
         <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form action="https://echo.htmlacademy.ru/courses" class="subscribe-form" method="post">
-          <input type="email" class="subscribe-form-input" name="email" placeholder="Ваш email" required>
+          <label for="subscribe-form-input" class="visually-hidden">Поле для ввода вашей электронной почты</label>
+          <input type="email" class="subscribe-form-input" id="subscribe-form-input" name="email" placeholder="Ваш email" required>
           <button type="submit" class="subscribe-form-button button form-button">Подписаться</button>
         </form>
       </section>
