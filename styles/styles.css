@@ -75,6 +75,10 @@ img {
 
 /* ГЛАВНАЯ СТРАНИЦА (INDEX) */
 /* Шапка (header) */
+.header {
+  background-color: #ffffff;
+}
+
 .site-menu-link {
   font-family: inherit;
   font-size: 20px;
