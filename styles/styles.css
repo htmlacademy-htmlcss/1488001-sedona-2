@@ -5,7 +5,7 @@ body {
   font-weight: 400;
   font-style: normal;
   color: #000000;
-  background-color: #ffffff;
+  background: #F2F2F2;
 }
 
 ul {
@@ -51,6 +51,9 @@ img {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  background-color: #756157;
+  color: #ffffff;
+  border-radius: 4px;
 }
 
 /* Локальное подключение шрифтов */
@@ -70,28 +73,37 @@ img {
   font-display: swap;
 }
 
+/* ГЛАВНАЯ СТРАНИЦА (INDEX) */
 /* Шапка (header) */
 .site-menu-link {
-  font-family: "PT Sans", sans-serif;
+  font-family: inherit;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
-  color: #000000;       /*inherit не сработал*/
+  color: #000000;
   text-align: center;
   text-decoration: none;
+  background-color: #ffffff;
+}
+
+.fav-number {
+  font-size: 10px;
+  line-height: 10px;
+  color: #ffffff;
 }
 
 /* Секция hero */
 .hero {
-  background-color: #000000;
-  background-image: url("../images/hero.jpg");
-  background-size: 100% auto;
+  background-image: url("../images/divider.svg"), url("../images/hero.jpg");
+  background-size: 100% auto, cover;
   background-repeat: no-repeat;
+  background-position: left bottom, left top;
 }
 
 /* Секция advantages */
 .advantages {
   text-align: center;
+  background-color: #ffffff;
 }
 
 .advantages-text {
@@ -105,11 +117,19 @@ img {
   line-height: 26px;
 }
 
-.half-baked-bg {
+.dark-background {
   background-color: #82B3D3;
 }
 
-.white-font {
+.medium-background {
+  background: rgba(131, 179, 211, 0.2);
+}
+
+.light-background {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.alternate-text-color {
   color: #ffffff;
 }
 
@@ -127,6 +147,7 @@ img {
 /* Секция services */
 .services {
   text-align: center;
+  background-color: #ffffff;
 }
 
 .services-text {
@@ -138,10 +159,6 @@ img {
 .services-description {
   font-size: 22px;
   line-height: 26px;
-}
-
-.half-baked-light-bg {
-  background-color: rgba(131, 179, 211, 0.12);
 }
 
 .service-title {
@@ -159,6 +176,7 @@ img {
 /* Секция search */
 .search {
   text-align: center;
+  background-color: #ffffff;
 }
 
 .search-text {
@@ -175,11 +193,34 @@ img {
 /* Секция subscribe */
 .subscribe {
   background-image: url("../images/subscribe.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   color: #ffffff;
   text-align: center;
 }
 
+.subscribe-form-input {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: left;
+  color: #000000;
+  background-color: #f2f2f2;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.form-button {
+  background-color: #82B3D3;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
 /* Подвал (footer) */
+.footer {
+  background-color: #ffffff;
+}
+
 .phone {
   font-size: 40px;
   line-height: 40px;
