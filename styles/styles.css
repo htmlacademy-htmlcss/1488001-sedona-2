@@ -1,32 +1,34 @@
+/* ШРИФТЫ */
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
 /* ОБЩИЕ */
 body {
   margin: 0;
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
-  font-style: normal;
   color: #000000;
-  background: #F2F2F2;
+  background: #f2f2f2;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-h1,
-h2,
-h3
-{
-  margin: 0;
-}
-
-p {
-  margin: 0;
-}
-
-img {
-  display: block;
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .visually-hidden {
@@ -56,27 +58,16 @@ img {
   border-radius: 4px;
 }
 
-/* Локальное подключение шрифтов */
-@font-face {
-  font-family: "PT Sans", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/ptsans-400.woff2') format('woff2');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PT Sans", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  src: url('../fonts/ptsans-700.woff2') format('woff2');
-  font-display: swap;
-}
-
 /* ГЛАВНАЯ СТРАНИЦА (INDEX) */
 /* Шапка (header) */
-.header {
-  background-color: #ffffff;
+.logo-image {
+  display: block;
+}
+
+.site-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .site-menu-link {
@@ -88,6 +79,12 @@ img {
   text-align: center;
   text-decoration: none;
   background-color: #ffffff;
+}
+
+.user-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .user-menu-link {
@@ -102,31 +99,48 @@ img {
 
 /* Секция hero */
 .hero {
+  background-color: #233847;
   background-image: url("../images/divider.svg"), url("../images/hero.jpg");
   background-size: 100% auto, cover;
   background-repeat: no-repeat;
   background-position: left bottom, left top;
+  padding-top: 50px;
+  padding-bottom: 83px;
+  min-height: 352px;
+}
+
+.hero-image {
+  display: block;
+  margin: 0 auto;
 }
 
 /* Секция advantages */
 .advantages {
   text-align: center;
-  background-color: #ffffff;
 }
 
 .advantages-text {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
 }
 
 .advantages-description {
   font-size: 22px;
   line-height: 26px;
+  margin: 0;
+}
+
+.advantages-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .dark-background {
-  background-color: #82B3D3;
+  background-color: #82b3d3;
 }
 
 .medium-background {
@@ -145,66 +159,94 @@ img {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
+  margin: 0;
 }
 
 .advantage-description {
   font-size: 18px;
   line-height: 24px;
+  margin: 0;
+}
+
+.advantage-image {
+  display: block;
 }
 
 /* Секция services */
 .services {
   text-align: center;
-  background-color: #ffffff;
 }
 
 .services-text {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 .services-description {
   font-size: 22px;
   line-height: 26px;
+  margin: 0;
 }
 
 .service-title {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
+  margin: 0;
 }
 
 .service-description {
   font-size: 18px;
   line-height: 21px;
   color: #333333;;
+  margin: 0;
+}
+
+.services-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /* Секция search */
 .search {
   text-align: center;
-  background-color: #ffffff;
 }
 
 .search-text {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 .search-description {
   font-size: 22px;
   line-height: 26px;
+  margin: 0;
 }
 
 /* Секция subscribe */
 .subscribe {
+  background-color: #8babb8;
   background-image: url("../images/subscribe.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   color: #ffffff;
   text-align: center;
+  min-height: 415px;
+}
+
+.subscribe-text {
+  margin: 0;
+}
+
+.subscribe-description {
+  margin: 0;
 }
 
 .subscribe-form-input {
@@ -219,16 +261,12 @@ img {
 }
 
 .form-button {
-  background-color: #82B3D3;
+  background-color: #5d7483;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
 /* Подвал (footer) */
-.footer {
-  background-color: #ffffff;
-}
-
 .phone {
   font-size: 40px;
   line-height: 40px;
