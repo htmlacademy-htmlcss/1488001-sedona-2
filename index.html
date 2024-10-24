@@ -10,40 +10,38 @@
     <div class="container">
       <!-- Шапка (header) -->
       <header class="header" data-test="header">
-        <div class="header-container">
-          <a href="#" class="logo-link">
-            <img src="images/logo.svg" alt="Логотип города Седона" class="logo-image" width="138" height="64">
-          </a>
-          <nav class="nav">
-            <ul class="site-menu">
-              <li class="site-menu-item">
-                <a href="#" class="site-menu-link">Главная</a>
-              </li>
-              <li class="site-menu-item">
-                <a href="#" class="site-menu-link">О Седоне</a>
-              </li>
-              <li class="site-menu-item">
-                <a href="#" class="site-menu-link">Гостиницы</a>
-              </li>
-            </ul>
-            <ul class="user-menu">
-              <li class="user-menu-item">
-                <a href="№" class="user-menu-link">
-                  <span class="visually-hidden">Поиск по сайту</span>
-                </a>
-              </li>
-              <li class="user-menu-item">
-                <a href="№" class="user-menu-link">
-                  <span class="visually-hidden">Избранное</span>
-                  <span class="fav-number">12</span>
-                </a>
-              </li>
-              <li class="user-menu-item">
-                <a href="№" class="user-menu-link button button-small">Хочу сюда</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <a href="#" class="logo-link">
+          <img src="images/logo.svg" alt="Логотип города Седона" class="logo-image" width="140" height="70">
+        </a>
+        <nav class="nav">
+          <ul class="site-menu">
+            <li class="site-menu-item">
+              <a href="#" class="site-menu-link">Главная</a>
+            </li>
+            <li class="site-menu-item">
+              <a href="#" class="site-menu-link">О Седоне</a>
+            </li>
+            <li class="site-menu-item">
+              <a href="#" class="site-menu-link">Гостиницы</a>
+            </li>
+          </ul>
+          <ul class="user-menu">
+            <li class="user-menu-item">
+              <a href="№" class="user-menu-link">
+                <span class="visually-hidden">Поиск по сайту</span>
+              </a>
+            </li>
+            <li class="user-menu-item">
+              <a href="№" class="user-menu-link">
+                <span class="visually-hidden">Избранное</span>
+                <span class="fav-number">12</span>
+              </a>
+            </li>
+            <li class="user-menu-item">
+              <a href="№" class="user-menu-link button button-small">Хочу сюда</a>
+            </li>
+          </ul>
+        </nav>
       </header>
 
       <main class="main" data-test="main">
@@ -63,36 +61,36 @@
             <p class="advantages-description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
           </div>
           <ul class="advantages-list">
-            <li class="advantages-list-item flex dark-background">
-              <div class="advantage-text flex-center-column">
-                <h3 class="advantage-title alternate-text-color">Настоящий городок</h3>
-                <p class="advantage-description alternate-text-color">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            <li class="advantages-item advantages-item-special">
+              <div class="advantage-cell">
+                <h3 class="advantage-title">Настоящий городок</h3>
+                <p class="advantage-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
               <img src="images/advantage-1.jpg" alt="Городок" class="advantage-image" width="800" height="385">
             </li>
-            <li class="advantages-list-item flex-center-column light-background">
-              <div class="advantage-text">
+            <li class="advantages-item">
+              <div class="advantage-cell">
                 <h3 class="advantage-title">Небольшая площадь</h3>
                 <p class="advantage-description">Все достопримечательности находятся очень близко</p>
               </div>
             </li>
-            <li class="advantages-list-item flex-center-column medium-background">
-              <div class="advantage-text">
+            <li class="advantages-item">
+              <div class="advantage-cell">
                 <h3 class="advantage-title">Красивая дорога</h3>
                 <p class="advantage-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
               </div>
             </li>
-            <li class="advantages-list-item flex-center-column light-background">
-              <div class="advantage-text">
+            <li class="advantages-item">
+              <div class="advantage-cell">
                 <h3 class="advantage-title">Мало туристов</h3>
                 <p class="advantage-description">Большинство едет в Гранд Каньон и толпится там</p>
               </div>
             </li>
-            <li class="advantages-list-item flex dark-background">
+            <li class="advantages-item advantages-item-special">
               <img src="images/advantage-2.jpg" alt="Мост дьявола" class="advantage-image"  width="800" height="385">
-              <div class="advantage-text">
-                <h3 class="advantage-title alternate-text-color">Там есть<br> мост дьявола</h3>
-                <p class="advantage-description alternate-text-color">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+              <div class="advantage-cell">
+                <h3 class="advantage-title">Там есть<br> мост дьявола</h3>
+                <p class="advantage-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
             </li>
           </ul>
@@ -106,15 +104,15 @@
             <p class="services-description">Опытный персонал и качественное обслуживание!</p>
           </div>
           <ul class="services-list">
-            <li class="services-list-item flex-center-column light-background">
+            <li class="services-item">
               <h3 class="service-title">Жильё</h3>
               <p class="service-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
             </li>
-            <li class="services-list-item flex-center-column">
+            <li class="services-item">
               <h3 class="service-title">Еда</h3>
               <p class="service-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
             </li>
-            <li class="services-list-item flex-center-column light-background">
+            <li class="services-item">
               <h3 class="service-title">Сувениры</h3>
               <p class="service-description">Не только китайского, но и настоящего местного производства!</p>
             </li>
@@ -166,7 +164,9 @@
               </a>
             </li>
           </ul>
-          <a href="tel:+78128121212" class="phone">+7 (812) 812-12-12</a>
+          <div class="phones">
+            <a href="tel:+78128121212" class="phone">+7 (812) 812-12-12</a>
+          </div>
           <a href="https://htmlacademy.ru/" class="copyright">
             <span class="visually-hidden">Посетить сайт разработчика</span>
           </a>
