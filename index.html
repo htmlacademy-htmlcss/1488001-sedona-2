@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <title>Седона / Главная</title>
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
@@ -16,13 +16,13 @@
         <nav class="nav">
           <ul class="site-menu">
             <li class="site-menu-item">
-              <a href="#" class="site-menu-link">Главная</a>
+              <a href="#" class="site-menu-link site-menu-link-current">Главная</a>
             </li>
             <li class="site-menu-item">
               <a href="#" class="site-menu-link">О Седоне</a>
             </li>
             <li class="site-menu-item">
-              <a href="#" class="site-menu-link">Гостиницы</a>
+              <a href="catalogue.html" class="site-menu-link">Гостиницы</a>
             </li>
           </ul>
           <ul class="user-menu">
@@ -38,7 +38,7 @@
               </a>
             </li>
             <li class="user-menu-item">
-              <a href="№" class="user-menu-link button button-small">Хочу сюда</a>
+              <a href="№" class="button button-small">Хочу сюда</a>
             </li>
           </ul>
         </nav>
@@ -62,33 +62,33 @@
           </div>
           <ul class="advantages-list">
             <li class="advantages-item advantages-item-special">
-              <div class="advantage-cell">
+              <div class="advantage-card">
                 <h3 class="advantage-title">Настоящий городок</h3>
                 <p class="advantage-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
               <img src="images/advantage-1.jpg" alt="Городок" class="advantage-image" width="800" height="385">
             </li>
             <li class="advantages-item">
-              <div class="advantage-cell">
+              <div class="advantage-card">
                 <h3 class="advantage-title">Небольшая площадь</h3>
                 <p class="advantage-description">Все достопримечательности находятся очень близко</p>
               </div>
             </li>
             <li class="advantages-item">
-              <div class="advantage-cell">
+              <div class="advantage-card">
                 <h3 class="advantage-title">Красивая дорога</h3>
                 <p class="advantage-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
               </div>
             </li>
             <li class="advantages-item">
-              <div class="advantage-cell">
+              <div class="advantage-card">
                 <h3 class="advantage-title">Мало туристов</h3>
                 <p class="advantage-description">Большинство едет в Гранд Каньон и толпится там</p>
               </div>
             </li>
             <li class="advantages-item advantages-item-special">
               <img src="images/advantage-2.jpg" alt="Мост дьявола" class="advantage-image"  width="800" height="385">
-              <div class="advantage-cell">
+              <div class="advantage-card">
                 <h3 class="advantage-title">Там есть<br> мост дьявола</h3>
                 <p class="advantage-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
@@ -139,7 +139,7 @@
           <form action="https://echo.htmlacademy.ru/courses" class="subscribe-form" method="post">
             <label for="subscribe-form-input" class="visually-hidden">Поле для ввода вашей электронной почты</label>
             <input type="email" class="subscribe-form-input" id="subscribe-form-input" name="email" placeholder="Ваш email" required>
-            <button type="submit" class="subscribe-form-button button form-button button-middle">Подписаться</button>
+            <button type="submit" class="subscribe-form-button button button-middle">Подписаться</button>
           </form>
         </section>
       </main>
