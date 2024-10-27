@@ -101,7 +101,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter-price">
+            <fieldset class="filter-group filter-price">
               <legend class="filter-title">Стоимость, ₽:</legend>
               <ul class="filter-ranges">
                 <li>
@@ -117,7 +117,7 @@
                 <div class="slider-track"></div>
               </div>
             </fieldset>
-            <fieldset class="filter-buttons">
+            <fieldset class="filter-group filter-buttons">
               <legend class="visually-hidden">Кнопки формы</legend>
               <button type="submit" class="button apply-button">Применить</button>
               <button type="reset" class="button reset-button">Сбросить</button>
@@ -141,28 +141,30 @@
                 <option value="popular">Сначала популярные</option>
               </select>
               <div class="filtered-layouts">
-                <div class="filtered-layout filtered-layout-active">
+                <button class="filtered-layout filtered-layout-active">
 
-                </div>
-                <div class="filtered-layout">
+                </button>
+                <button class="filtered-layout">
 
-                </div>
-                <div class="filtered-layout">
+                </button>
+                <button class="filtered-layout">
 
-                </div>
+                </button>
               </div>
             </div>
             <ul class="filtered-cards">
               <li class="filtered-card">
-                <img class="filtered-card-image" src="images/filtered-1.jpg" width="300" height="212" alt="Горы.">
-                <h3 class="filtered-card-title">Amara Resort & Spa</h3>
+                <a href="#" class="filtered-card-link">
+                  <img class="filtered-card-image" src="images/filtered-1.jpg" width="300" height="212" alt="Горы.">
+                  <h3 class="filtered-card-title">Amara Resort & Spa</h3>
+                </a>
                 <div class="filtered-card-text">
                   <p class="filtered-card-type">Гостиница</p>
                   <p class="filtered-card-price">От 4000 ₽</p>
                 </div>
                 <div class="filtered-card-buttons">
                   <a class="filtered-card-button details-button" href="#">Подробнее</a>
-                  <a class="filtered-card-button favorites-button" href="#">В избранное</a>
+                  <button class="filtered-card-button favorites-button" href="#">В избранное</button>
                 </div>
                 <div class="filtered-rating">
                   <p class="filtered-star-rating"></p>
@@ -170,15 +172,17 @@
                 </div>
               </li>
               <li class="filtered-card">
-                <img class="filtered-card-image" src="images/filtered-2.jpg" width="300" height="212" alt="Горы.">
-                <h3 class="filtered-card-title">Villas at Poco Diablo</h3>
+                <a href="#" class="filtered-card-link">
+                  <img class="filtered-card-image" src="images/filtered-2.jpg" width="300" height="212" alt="Горы.">
+                  <h3 class="filtered-card-title">Villas at Poco Diablo</h3>
+                </a>
                 <div class="filtered-card-text">
                   <p class="filtered-card-type">Гостиница</p>
                   <p class="filtered-card-price">От 5000 ₽</p>
                 </div>
                 <div class="filtered-card-buttons">
                   <a class="filtered-card-button details-button" href="#">Подробнее</a>
-                  <a class="filtered-card-button favorites-button-active" href="#">В избранном</a>
+                  <button class="filtered-card-button favorites-button-active" href="#">В избранном</button>
                 </div>
                 <div class="filtered-rating">
                   <p class="filtered-star-rating"></p>
@@ -186,15 +190,17 @@
                 </div>
               </li>
               <li class="filtered-card">
-                <img class="filtered-card-image" src="images/filtered-3.jpg" width="300" height="212" alt="Горы.">
-                <h3 class="filtered-card-title">Desert Quail Inn</h3>
+                <a href="#" class="filtered-card-link">
+                  <img class="filtered-card-image" src="images/filtered-3.jpg" width="300" height="212" alt="Горы.">
+                  <h3 class="filtered-card-title">Desert Quail Inn</h3>
+                </a>
                 <div class="filtered-card-text">
                   <p class="filtered-card-type">Гостиница</p>
                   <p class="filtered-card-price">От 2500 ₽</p>
                 </div>
                 <div class="filtered-card-buttons">
                   <a class="filtered-card-button details-button" href="#">Подробнее</a>
-                  <a class="filtered-card-button favorites-button" href="#">В избранное</a>
+                  <button class="filtered-card-button favorites-button" href="#">В избранное</button>
                 </div>
                 <div class="filtered-rating">
                   <p class="filtered-star-rating"></p>
@@ -202,15 +208,17 @@
                 </div>
               </li>
               <li class="filtered-card">
-                <img class="filtered-card-image" src="images/filtered-4.jpg" width="300" height="212" alt="Горы.">
-                <h3 class="filtered-card-title">GreenTree Inn</h3>
+                <a href="#" class="filtered-card-link">
+                  <img class="filtered-card-image" src="images/filtered-4.jpg" width="300" height="212" alt="Горы.">
+                  <h3 class="filtered-card-title">GreenTree Inn</h3>
+                </a>
                 <div class="filtered-card-text">
                   <p class="filtered-card-type">Гостиница</p>
                   <p class="filtered-card-price">От 1500 ₽</p>
                 </div>
                 <div class="filtered-card-buttons">
                   <a class="filtered-card-button details-button" href="#">Подробнее</a>
-                  <a class="filtered-card-button favorites-button" href="#">В избранное</a>
+                  <button class="filtered-card-button favorites-button" href="#">В избранное</button>
                 </div>
                 <div class="filtered-rating">
                   <p class="filtered-star-rating"></p>
@@ -219,7 +227,7 @@
               </li>
             </ul>
             <ul class="pagination">
-              <li class="pagination-item pagination-current">
+              <li class="pagination-item">
                 <a class="pagination-link pagination-link-current">1</a>
               </li>
               <li class="pagination-item">
@@ -231,6 +239,7 @@
               <li class="pagination-item">
                 <a class="pagination-link" href="#">4</a>
               </li>
+              <li class="pagination-item pagination-dots">...</li>
               <li class="pagination-item">
                 <a class="pagination-link" href="#">10</a>
               </li>
