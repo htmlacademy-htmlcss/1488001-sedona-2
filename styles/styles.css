@@ -200,8 +200,8 @@ body {
 }
 
 .advantages-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -215,6 +215,10 @@ body {
 
 .advantages-item:nth-child(even) {
   background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item-special {
+  grid-column: 1 / -1;
 }
 
 .advantages-item-special .advantage-card {
@@ -648,8 +652,11 @@ body {
 }
 
 .filtered-card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  grid-template-rows: 1fr;
+  gap: 16px 20px;
+  width: 340px;
   padding: 20px;
   box-sizing: border-box;
   border: 1px solid #e6e6e6;
@@ -657,6 +664,7 @@ body {
 }
 
 .filtered-card-link {
+  grid-column: 1 / -1;
   text-decoration: none;
   color: #000000;
 }
@@ -669,33 +677,27 @@ body {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
-  margin-top: 0;
-  margin-bottom: 16px;
-}
-
-.filtered-card-content {
-  margin-top: auto;
+  margin: 0;
 }
 
 .filtered-card-text {
-  display: flex;
-  justify-content: space-between;
+  grid-column: 1 / -1;
   color: #333333;
   font-size: 18px;
   line-height: 21px;
 }
 
 .filtered-card-type {
-  margin-top: 0;
+  margin: 0;
 }
 
 .filtered-card-price {
-  margin-top: 0;
+  justify-self: end;
+  margin: 0;
 }
 
 .filtered-card-buttons {
-  display: flex;
-  justify-content: space-between;
+  grid-column: 1 / -1;
   margin-bottom: 14px;
 }
 
@@ -716,10 +718,12 @@ body {
 }
 
 .details-button {
+  grid-column: 1 / 2;
   background-color: #756157;
 }
 
 .favorites-button {
+  grid-column: 2 / 3;
   background-color: #82b3d3
 }
 
@@ -728,8 +732,7 @@ body {
 }
 
 .filtered-rating {
-  display: flex;
-  justify-content: space-between;
+  grid-column: 1 / -1;
 }
 
 .filtered-star-rating {
