@@ -68,6 +68,8 @@ body {
   width: 160px;
   font-size: 16px;
   line-height: 20px;
+  margin-left: 20px;
+  position: relative;
 }
 
 .button-middle {
@@ -82,6 +84,9 @@ body {
   width: 376px;
   font-size: 20px;
   line-height: 36px;
+  padding-left: 50px;
+  padding-right: 50px;
+  box-sizing: border-box;
 }
 
 .main {
@@ -123,6 +128,7 @@ body {
 }
 
 .site-menu-link {
+  position: relative;
   font-family: inherit;
   font-size: 20px;
   line-height: 24px;
@@ -131,6 +137,16 @@ body {
   text-align: center;
   text-decoration: none;
   background-color: #ffffff;
+}
+
+.site-menu-link-current::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #756257;
+  position: absolute;
+  left: 0;
+  bottom: -25px;
 }
 
 .user-menu {
@@ -143,16 +159,34 @@ body {
   text-decoration: none;
 }
 
+.user-menu-item.wishlist {
+  position: relative;
+}
+
 .user-menu-link {
   min-width: 44px;
   min-height: 64px;
   text-decoration: none;
 }
 
+.user-menu-image {
+  padding: 22px 12px;
+}
+
 .fav-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 10px;
   line-height: 10px;
   color: #ffffff;
+  position: absolute;
+  top: 11px;
+  left: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  border-radius: 50%;
+  background-color: #7db54f;
 }
 
 /* Секция hero */
@@ -209,7 +243,6 @@ body {
 
 .advantages-item {
   display: flex;
-  flex-grow: 1;
   background: rgba(131, 179, 211, 0.2);
 }
 
@@ -242,6 +275,21 @@ body {
   margin: 0;
   text-transform: uppercase;
   margin-bottom: 60px;
+  position: relative;
+}
+
+.advantage-title::after {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background-color: #000000;
+  position: absolute;
+  top: 150%;
+  left: 36%;
+}
+
+.advantages-item-special .advantage-title::after {
+  background-color: #ffffff;
 }
 
 .advantage-description {
@@ -304,15 +352,15 @@ body {
   background-position: center 81px;
 }
 
-.services-item:nth-child(n+1) {
+.services-item.housing {
   background-image: url("../images/services1.svg");
 }
 
-.services-item:nth-child(2n) {
+.services-item.food {
   background-image: url("../images/services2.svg");
 }
 
-.services-item:nth-child(3n) {
+.services-item.gifts {
   background-image: url("../images/services3.svg");
 }
 
@@ -426,6 +474,7 @@ body {
 /* Подвал (footer) */
 .footer-container {
   display: flex;
+  justify-content: space-between;
   width: 1060px;
   margin: 0 auto;
   padding-top: 40px;
@@ -434,9 +483,18 @@ body {
 }
 
 .socials-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 142px;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.socials-item-link {
+  display: inline-block;
+  padding: 13px 12px;
 }
 
 .phones {
@@ -619,6 +677,8 @@ body {
 .select-control {
   width: 292px;
   height: 48px;
+  padding: 14px 20px;
+  appearance: none;
 }
 
 .filtered-layouts {
@@ -635,6 +695,21 @@ body {
   border: 2px solid #e5e5e5;
   background-color: transparent;
   border-radius: 4px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.filtered-layout.tiles {
+  background-image: url("/images/tiles.svg");
+}
+
+.filtered-layout.cards {
+  background-image: url("/images/cards.svg");
+
+}
+
+.filtered-layout.list {
+  background-image: url("/images/list.svg");
 }
 
 .filtered-layout-active {
@@ -680,7 +755,9 @@ body {
   margin: 0;
 }
 
-.filtered-card-text {
+.filtered-card-description {
+  display: flex;
+  justify-content: space-between;
   grid-column: 1 / -1;
   color: #333333;
   font-size: 18px;
