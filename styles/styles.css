@@ -89,6 +89,52 @@ body {
   box-sizing: border-box;
 }
 
+.button-brown:hover,
+.button-brown:focus {
+  background-color: #615048;
+}
+
+.button-brown:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.blue-button:hover,
+.blue-button:focus {
+  background-color: #68a2ca;
+}
+
+.blue-button:active {
+  background-color: #82b3d3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.green-button:hover,
+.green-button:focus {
+  background-color: #6c9e42;
+}
+
+.green-button:active {
+  background-color: #7db54f;
+  color:rgba(255, 255, 255, 0.3);
+}
+
+.transparent-button {
+  padding: 8px 50px;
+}
+
+.transparent-button:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.transparent-button:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.transparent-button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .main {
   flex-grow: 1;
 }
@@ -100,7 +146,7 @@ body {
   width: 1060px;
   margin: 0 auto;
   box-sizing: border-box;
-  padding-left: 168px;
+  padding-left: 169px;
 }
 
 .logo-link {
@@ -111,7 +157,6 @@ body {
 
 .nav {
   display: flex;
-  width: 100%;
 }
 
 .site-menu {
@@ -146,7 +191,7 @@ body {
   background-color: #756257;
   position: absolute;
   left: 0;
-  bottom: -25px;
+  bottom: -20px;
 }
 
 .user-menu {
@@ -164,13 +209,21 @@ body {
 }
 
 .user-menu-link {
+  display: inline-block;
   min-width: 44px;
-  min-height: 64px;
+  min-height: 58px;
   text-decoration: none;
+  background-position: center center;
+  background-repeat: no-repeat;
+  fill: #000000;
 }
 
-.user-menu-image {
-  padding: 22px 12px;
+.user-menu-link.search-icon {
+  background-image: url("../images/search.svg");
+}
+
+.user-menu-link.wishlist-icon {
+  background-image: url("../images/wishlist.svg");
 }
 
 .fav-number {
@@ -208,12 +261,12 @@ body {
 
 /* Секция advantages */
 .advantages {
-  padding-top: 69px;
+  padding-top: 68px;
   text-align: center;
 }
 
 .advantages-summary {
-  padding-bottom: 90px;
+  padding-bottom: 91px;
   width: 651px;
   margin: 0 auto;
 }
@@ -257,13 +310,13 @@ body {
 .advantages-item-special .advantage-card {
   background-color: #82b3d3;
   color: #ffffff;
-  padding-top: 105px;
+  padding-top: 103px;
   padding-bottom: 90px;
 }
 
 .advantage-card {
   width: 400px;
-  padding: 111px 85px 109px;
+  padding: 113px 85px;
   box-sizing: border-box;
   margin: 0 auto;
 }
@@ -274,7 +327,7 @@ body {
   font-weight: 700;
   margin: 0;
   text-transform: uppercase;
-  margin-bottom: 60px;
+  margin-bottom: 61px;
   position: relative;
 }
 
@@ -284,8 +337,9 @@ body {
   height: 2px;
   background-color: #000000;
   position: absolute;
-  top: 150%;
-  left: 36%;
+  top: calc(100% + 26px);
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .advantages-item-special .advantage-title::after {
@@ -294,7 +348,7 @@ body {
 
 .advantage-description {
   font-size: 18px;
-  line-height: 24px;
+  line-height: 21px;
   margin: 0;
 }
 
@@ -479,28 +533,44 @@ body {
   margin: 0 auto;
   padding-top: 40px;
   padding-bottom: 30px;
-
 }
 
 .socials-list {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  width: 142px;
+  width: 144px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .socials-item-link {
-  display: inline-block;
-  padding: 13px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 46px;
+}
+
+.socials-item-icon {
+  fill: #83b3d3;
+}
+
+.socials-item-icon:hover,
+.socials-item-icon:focus {
+  fill: #68a2ca;
+}
+
+.socials-item-icon:active {
+  fill: rgba(104, 162, 202, 0.3);
 }
 
 .phones {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  padding-top: 4px;
 }
 
 .phone {
@@ -511,8 +581,31 @@ body {
   display: inline-block;
 }
 
+.phone:hover,
+.phone:focus {
+  color:#756157;
+}
+
+.phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 .copyright {
   display: inline-block;
+  padding-top: 6px;
+}
+
+.copyright-icon {
+  fill: #000000;
+}
+
+.copyright-icon:hover,
+.copyright-icon:focus {
+  fill: #756157;
+}
+
+.copyright-icon:active {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 /* СТРАНИЦА КАТАЛЛГА (CATALOGUE) */
@@ -548,16 +641,34 @@ body {
   list-style-type: none;
 }
 
-.breadcrumbs-item {
+.breadcrumbs-link {
+  display: inline-block;
+  background-image: url("../images/home.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  width: 12px;
+  height: 12px;
+}
+
+.breadcrumbs-inactive {
   font-size: 16px;
   line-height: 21px;
   color: #ffffff;
   text-decoration: none;
-  margin-right: 28px;
+  cursor: default;
 }
 
-.breadcrumbs-item:last-child {
-  margin-right: 0;
+.breadcrumbs-inactive:before {
+  content: "";
+  display: inline-block;
+  background-image: url("../images/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 7px;
+  height: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: default;
 }
 
 .filter-title {
@@ -697,23 +808,28 @@ body {
   border-radius: 4px;
   background-position: center center;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .filtered-layout.tiles {
-  background-image: url("/images/tiles.svg");
+  background-image: url("../images/tiles.svg");
 }
 
 .filtered-layout.cards {
-  background-image: url("/images/cards.svg");
-
+  background-image: url("../images/cards.svg");
 }
 
 .filtered-layout.list {
-  background-image: url("/images/list.svg");
+  background-image: url("../images/list.svg");
 }
 
-.filtered-layout-active {
+.filtered-layout:hover,
+.filtered-layout:active {
   border-color: #000000;
+}
+
+.filtered-layout:focus {
+  border-color: #68a2ca;
 }
 
 .filtered-cards {
@@ -795,12 +911,10 @@ body {
 }
 
 .details-button {
-  grid-column: 1 / 2;
   background-color: #756157;
 }
 
 .favorites-button {
-  grid-column: 2 / 3;
   background-color: #82b3d3
 }
 
@@ -810,10 +924,30 @@ body {
 
 .filtered-rating {
   grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .filtered-star-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;;
   margin: 0;
+  height: 17px;
+  background: url("../images/star.svg") space 0 0;
+}
+
+.star-rating-two {
+  width: 44px;
+}
+
+.star-rating-three {
+  width: 66px;
+}
+
+.star-rating-four {
+  width: 88px;
 }
 
 .filtered-digits-rating {
@@ -858,6 +992,16 @@ body {
   border-radius: 4px;
   padding: 0 7px;
   box-sizing: border-box;
+}
+
+.pagination-link:hover,
+.pagination-link:focus{
+  background-color: #68a2ca;
+}
+
+.pagination-link:active {
+  background-color: #82b3d3;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .pagination-link-current {
