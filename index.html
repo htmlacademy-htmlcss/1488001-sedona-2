@@ -3,11 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>Седона / Главная</title>
+    <!-- Фавиконка -->
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="./images/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./images/favicons/apple.png">  <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
+    <!-- Стили -->
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
 
     <div class="container">
+
       <!-- Шапка (header) -->
       <header class="header" data-test="header">
         <a href="#" class="logo-link">
@@ -38,7 +45,7 @@
               </a>
             </li>
             <li class="user-menu-item">
-              <a href="№" class="button button-small button-brown">Хочу сюда</a>
+              <a href="№" class="button button-small brown-button">Хочу сюда</a>
             </li>
           </ul>
         </nav>
@@ -126,7 +133,7 @@
           <p class="search-description">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие
             предложения гостиниц в Седоне
           </p>
-          <a href="#" class="button button-large button-brown">Поиск гостиницы в Седоне</a>
+          <a href="#" class="button button-large brown-button">Поиск гостиницы в Седоне</a>
         </section>
 
         <!-- Секция subscribe -->
@@ -136,10 +143,10 @@
             <p class="subscribe-text">Подпишитесь на рассылку</p>
             <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
           </div>
-          <form action="https://echo.htmlacademy.ru/courses" class="subscribe-form" method="post">
+          <form action="https://echo.htmlacademy.ru/" class="subscribe-form" method="post">
             <label for="subscribe-form-input" class="visually-hidden">Поле для ввода вашей электронной почты</label>
             <input type="email" class="subscribe-form-input" id="subscribe-form-input" name="email" placeholder="Ваш email" required>
-            <button type="submit" class="subscribe-form-button button button-middle">Подписаться</button>
+            <button type="submit" class="subscribe-form-button button button-middle blue-button">Подписаться</button>
           </form>
         </section>
       </main>
@@ -203,5 +210,45 @@
         </div>
       </footer>
     </div>
+
+    <div class="overlay hidden">
+      <div class="modal">
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <form action="https://echo.htmlacademy.ru/" class="modal-form" method="get">
+          <h2 class="modal-heading">Поиск гостиницы в Седоне</h2>
+          <label for="arrival-date" class="modal-label modal-date-label">Дата Заезда:</label>
+          <input type="text" id="arrival-date" class="modal-date-input" value="27 апреля 2020" required placeholder="Укажите дату">
+          <p class="modal-date-info error">Мы не можем отправить вас в прошлое.</p>
+          <label for="departure-date" class="modal-label modal-date-label">Дата Выезда:</label>
+          <input type="text" id="departure-date" class="modal-date-input" value="1 сентября 2023" required placeholder="Укажите дату">
+          <p class="modal-date-info info">На эти даты есть свободные номера. Пока есть.</p>
+          <label class="modal-label modal-adults-label">Взрослые:</label>
+          <div class="modal-counter">
+            <button class="modal-button decrease" type="button"></button>
+            <input type="number" class="modal-counter-input" value="2" name="adults">
+            <button class="modal-button increase" type="button"></button>
+          </div>
+          <label class="modal-label modal-kids-label">Дети:
+            <span class="modal-tooltip">
+              <button class="modal-tooltip-toggle" type="button" aria-labelledby="modal-tooltip-text">
+                <svg class="modal-tooltip-icon" aria-hidden="true" focusable="false" width="2" height="12" viewBox="0 0 2 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white"/>
+                </svg>
+              </button>
+              <span class="modal-tooltip-text" id="modal-tooltip-text" role="tooltip">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+            </span>
+          </label>
+          <div class="modal-counter">
+            <button class="modal-button decrease" type="button"></button>
+            <input type="number" class="modal-counter-input" value="2" name="kids">
+            <button class="modal-button increase" type="button"></button>
+          </div>
+          <button type="submit" class="modal-submit-button">Найти</button>
+        </form>
+      </div>
+    </div>
+
   </body>
 </html>
