@@ -4,10 +4,8 @@
     <meta charset="utf-8">
     <title>Седона / Главная</title>
     <!-- Фавиконка -->
-    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
-    <link rel="icon" href="./images/favicons/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="./images/favicons/apple.png">  <!-- 180×180 -->
-    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
     <!-- Стили -->
     <link rel="stylesheet" href="styles/styles.css">
   </head>
@@ -33,18 +31,18 @@
             </li>
           </ul>
           <ul class="user-menu">
-            <li class="user-menu-item">
+            <li class="user-menu-item search-button">
               <a href="#" class="user-menu-link search-icon">
                 <span class="visually-hidden">Поиск по сайту</span>
               </a>
             </li>
-            <li class="user-menu-item wishlist">
+            <li class="user-menu-item wishlist-button">
               <a href="#" class="user-menu-link wishlist-icon">
                 <span class="visually-hidden">Избранное</span>
                 <span class="fav-number">12</span>
               </a>
             </li>
-            <li class="user-menu-item">
+            <li class="user-menu-item want-button">
               <a href="№" class="button button-small brown-button">Хочу сюда</a>
             </li>
           </ul>
@@ -133,7 +131,7 @@
           <p class="search-description">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие
             предложения гостиниц в Седоне
           </p>
-          <a href="#" class="button button-large brown-button">Поиск гостиницы в Седоне</a>
+          <a href="#" class="search-hotel-button button button-large brown-button">Поиск гостиницы в Седоне</a>
         </section>
 
         <!-- Секция subscribe -->
@@ -211,7 +209,7 @@
       </footer>
     </div>
 
-    <div class="overlay hidden">
+    <div class="overlay overlay-hidden">
       <div class="modal">
         <button class="modal-close-button" type="button">
           <span class="visually-hidden">Закрыть</span>
@@ -219,11 +217,15 @@
         <form action="https://echo.htmlacademy.ru/" class="modal-form" method="get">
           <h2 class="modal-heading">Поиск гостиницы в Седоне</h2>
           <label for="arrival-date" class="modal-label modal-date-label">Дата Заезда:</label>
-          <input type="text" id="arrival-date" class="modal-date-input" value="27 апреля 2020" required placeholder="Укажите дату">
-          <p class="modal-date-info error">Мы не можем отправить вас в прошлое.</p>
+          <div class="modal-input-container">
+            <input type="text" id="arrival-date" class="modal-date-input" value="27 апреля 2020" required placeholder="Укажите дату">
+            <p class="modal-date-info error">Мы не можем отправить вас в прошлое.</p>
+          </div>
           <label for="departure-date" class="modal-label modal-date-label">Дата Выезда:</label>
-          <input type="text" id="departure-date" class="modal-date-input" value="1 сентября 2023" required placeholder="Укажите дату">
-          <p class="modal-date-info info">На эти даты есть свободные номера. Пока есть.</p>
+          <div class="modal-input-container">
+            <input type="text" id="departure-date" class="modal-date-input" value="1 сентября 2023" required placeholder="Укажите дату">
+            <p class="modal-date-info info">На эти даты есть свободные номера. Пока есть.</p>
+          </div>
           <label class="modal-label modal-adults-label">Взрослые:</label>
           <div class="modal-counter">
             <button class="modal-button decrease" type="button"></button>
@@ -245,10 +247,12 @@
             <input type="number" class="modal-counter-input" value="2" name="kids">
             <button class="modal-button increase" type="button"></button>
           </div>
-          <button type="submit" class="modal-submit-button">Найти</button>
+          <button type="submit" class="modal-submit-button blue-button">Найти</button>
         </form>
       </div>
     </div>
+
+    <script src="./scripts/script.js"></script>
 
   </body>
 </html>

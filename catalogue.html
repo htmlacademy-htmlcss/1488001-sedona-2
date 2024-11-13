@@ -5,10 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Седона / Гостиницы</title>
     <!-- Фавиконка -->
-    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
-    <link rel="icon" href="./images/favicons/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="./images/favicons/apple.png">  <!-- 180×180 -->
-    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
     <!-- Стили -->
     <link rel="stylesheet" href="styles/styles.css">
 
@@ -35,18 +33,18 @@
           </li>
         </ul>
         <ul class="user-menu">
-          <li class="user-menu-item">
+          <li class="user-menu-item search-button">
             <a href="#" class="user-menu-link search-icon">
               <span class="visually-hidden">Поиск по сайту</span>
             </a>
           </li>
-          <li class="user-menu-item wishlist">
+          <li class="user-menu-item wishlist-button">
             <a href="#" class="user-menu-link wishlist-icon">
               <span class="visually-hidden">Избранное</span>
               <span class="fav-number">12</span>
             </a>
           </li>
-          <li class="user-menu-item">
+          <li class="user-menu-item want-button">
             <a href="№" class="button button-small brown-button">Хочу сюда</a>
           </li>
         </ul>
@@ -100,7 +98,7 @@
               </ul>
             </fieldset>
             <fieldset class="filter-group">
-              <legend class="filter-title">Тип жилья:</legend>
+              <legend class="filter-title">Тип Жилья:</legend>
               <ul class="filter-list">
                 <li class="filter-item">
                   <label class="control">
@@ -351,5 +349,8 @@
           </div>
         </footer>
   </div>
+
+  <script src="./scripts/script.js"></script>
+
 </body>
 </html>
