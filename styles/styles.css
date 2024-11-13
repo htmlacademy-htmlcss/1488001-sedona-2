@@ -157,7 +157,7 @@ body {
 }
 
 /* ГЛАВНАЯ СТРАНИЦА (INDEX) */
-/* Шапка (header) */
+
 .header {
   position: relative;
   width: 1060px;
@@ -280,7 +280,6 @@ body {
   background-color: #7db54f;
 }
 
-/* Секция hero */
 .hero {
   background-color: #233847;
   background-image: url("../images/divider.svg"), url("../images/hero.jpg");
@@ -297,7 +296,6 @@ body {
   margin: 0 auto;
 }
 
-/* Секция advantages */
 .advantages {
   padding-top: 68px;
   text-align: center;
@@ -396,7 +394,6 @@ body {
   height: 100%;
 }
 
-/* Секция services */
 .services {
   text-align: center;
 }
@@ -478,7 +475,6 @@ body {
   width: 230px;
 }
 
-/* Секция search */
 .search {
   text-align: center;
   padding-top: 93px;
@@ -503,7 +499,6 @@ body {
   margin-bottom: 54px;
 }
 
-/* Секция subscribe */
 .subscribe {
   background-color: #8babb8;
   background-image: url("../images/subscribe.jpg");
@@ -568,7 +563,6 @@ body {
   border: none;
 }
 
-/* Подвал (footer) */
 .footer-container {
   display: flex;
   justify-content: space-between;
@@ -660,8 +654,8 @@ body {
   fill: #000000;
 }
 
-/* СТРАНИЦА КАТАЛЛГА (CATALOGUE) */
-/* Секция filter */
+/* СТРАНИЦА КАТАЛОГА (CATALOGUE) */
+
 .filter {
   background-color: #233847;
   background-image: url("../images/filter.jpg");
@@ -984,7 +978,6 @@ body {
   width: 191px;
 }
 
-/* Секция filtered */
 .filtered {
   padding: 46px 70px 60px;
 }
@@ -1015,6 +1008,7 @@ body {
   color: #333333;
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
+  border-radius: 4px;
   background-image: url("../images/arrow-select.svg");
   background-repeat: no-repeat;
   background-position: right 11px center;
@@ -1025,7 +1019,8 @@ body {
 
 .select-control:hover,
 .select-control:focus {
-  outline: 2px solid #68a2ca;
+  border-color: #68a2ca;
+  outline: none;
 }
 
 .select-control:disabled {
@@ -1052,8 +1047,13 @@ body {
   cursor: pointer;
 }
 
+.filtered-layout:hover {
+  border-color: #000000;
+}
+
 .filtered-layout:focus {
-  outline: 2px solid #68a2ca;
+  border-color: #68a2ca;
+  outline: none;
 }
 
 .filtered-layout:active {
@@ -1296,7 +1296,6 @@ body {
   min-height: 60px;
 }
 
-/* Секция subscribe-inner */
 .subscribe-inner {
   padding-top: 100px;
   padding-bottom: 104px;
@@ -1370,10 +1369,14 @@ body {
   outline: none;
 }
 
-.modal-close-button:active .modal-close-button::before,
-.modal-close-button::after {
+.modal-close-button:active {
+  border: none;
   outline: none;
-  background-color: rgba(0, 0, 0, 1);
+}
+
+.modal-close-button:active::before,
+.modal-close-button:active::after {
+  opacity: 0.3;
 }
 
 .modal-form {
@@ -1422,6 +1425,7 @@ body {
   padding: 0 59px 0 20px;
   box-sizing: border-box;
   border: none;
+  border-radius: 4px;
   position: relative;
   background-image: url("../images/calendar.svg");
   background-repeat: no-repeat;
@@ -1499,12 +1503,27 @@ body {
   background-repeat: no-repeat;
   padding: 12px 19px;
   border: none;
+  position: relative;
+}
+
+.modal-button::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 11px;
+  left: 6px;
+  border-radius: 4px;
+  border: 3px solid #82b3d3;
+  display: none;
 }
 
 .modal-button:focus {
-  border: 3px solid #82b3d3;
-  border-radius: 4px;
   outline: none;
+}
+
+.modal-button:focus::before {
+  display: block;
 }
 
 .modal-button.decrease {
@@ -1547,12 +1566,19 @@ body {
   top: -2px;
 }
 
-.modal-tooltip-toggle:hover + .modal-tooltip-text
+.modal-tooltip-toggle:hover {
+  background-color: #68a2ca;
+}
+
+.modal-tooltip-toggle:focus {
+  outline: none;
+  background-color: #68a2ca;
+}
+
+.modal-tooltip:hover .modal-tooltip-text,
 .modal-tooltip-toggle:focus + .modal-tooltip-text {
   display: block;
   cursor: pointer;
-  outline: none;
-  border: none;
 }
 
 .modal-tooltip-text {
@@ -1561,6 +1587,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   font-size: 16px;
+  font-weight: 400;
   line-height: 20px;
   background-color: #333333;
   color: #ffffff;

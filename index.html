@@ -13,7 +13,6 @@
 
     <div class="container">
 
-      <!-- Шапка (header) -->
       <header class="header" data-test="header">
         <a href="#" class="logo-link">
           <img src="images/logo.svg" alt="Логотип города Седона" class="logo-image" width="140" height="70">
@@ -52,13 +51,11 @@
       <main class="main" data-test="main">
         <h1 class="visually-hidden">Неофициальный сайт города Седона</h1>
 
-        <!-- Секция hero -->
         <section class="hero" data-test="hero">
           <h2 class="visually-hidden">Приглашение посетить город</h2>
           <img src="images/welcome.svg" alt="Приглашение" class="hero-image" width="458" height="352">
         </section>
 
-        <!-- Секция advantages -->
         <section class="advantages" data-test="advantages">
           <h2 class="visually-hidden">Причины посетить город</h2>
           <div class="advantages-summary">
@@ -101,7 +98,6 @@
           </ul>
         </section>
 
-        <!-- Секция services -->
         <section class="services" data-test="services">
           <h2 class="visually-hidden">Услуги</h2>
           <div class="services-summary">
@@ -124,7 +120,6 @@
           </ul>
         </section>
 
-        <!-- Секция search -->
         <section class="search" data-test="search">
           <h2 class="visually-hidden">Лучшие предложения гостиниц в Седоне</h2>
           <p class="search-text">Заинтересовались?</p>
@@ -134,7 +129,6 @@
           <a href="#" class="search-hotel-button button button-large brown-button">Поиск гостиницы в Седоне</a>
         </section>
 
-        <!-- Секция subscribe -->
         <section class="subscribe" data-test="subscribe">
           <h2 class="visually-hidden">Подписка на почтовую рассылку</h2>
           <div class="subscribe-summary">
@@ -149,7 +143,6 @@
         </section>
       </main>
 
-      <!-- Подвал (footer) -->
       <footer class="footer" data-test="footer">
         <div class="footer-container">
           <ul class="socials-list">
@@ -182,7 +175,7 @@
             <a href="tel:+78128121212" class="phone">+7 (812) 812-12-12</a>
           </div>
           <a href="https://htmlacademy.ru/" class="copyright">
-            <svg class="copyright-icon" aria-hidden="true" focusable="false" width="115" height="34" viewBox="0 0 115 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="copyright-icon" aria-hidden="true" focusable="false" width="115" height="34" viewBox="0 0 115 34" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
               <g clip-path="url(#clip0_133671_334)">
               <path d="M0 13.2564V15.8564H2.5V13.2564H0Z"/>
               <path d="M11.6 4.85645C10 4.85645 8.8 5.55645 8 6.55645H7.9V0.356445H5.9V15.8564H7.9V10.5564C7.9 8.45645 9.2 6.95645 11.2 6.95645C13 6.95645 14.1 8.35645 14.1 10.1564V15.8564H16.1V9.75644C16.2 6.75644 14.3 4.85645 11.6 4.85645Z"/>
@@ -226,26 +219,35 @@
             <input type="text" id="departure-date" class="modal-date-input" value="1 сентября 2023" required placeholder="Укажите дату">
             <p class="modal-date-info info">На эти даты есть свободные номера. Пока есть.</p>
           </div>
-          <label class="modal-label modal-adults-label">Взрослые:</label>
+          <label for="adults" class="modal-label modal-adults-label">Взрослые:</label>
           <div class="modal-counter">
-            <button class="modal-button decrease" type="button"></button>
-            <input type="number" class="modal-counter-input" value="2" name="adults">
-            <button class="modal-button increase" type="button"></button>
+            <button class="modal-button decrease" type="button">
+              <span class="visually-hidden">Уменьшить на единицу</span>
+            </button>
+            <input type="number" class="modal-counter-input" value="2" name="adults" id="adults">
+            <button class="modal-button increase" type="button">
+              <span class="visually-hidden">Увеличить на единицу</span>
+            </button>
           </div>
-          <label class="modal-label modal-kids-label">Дети:
+          <label for="kids" class="modal-label modal-kids-label">Дети:
             <span class="modal-tooltip">
               <button class="modal-tooltip-toggle" type="button" aria-labelledby="modal-tooltip-text">
                 <svg class="modal-tooltip-icon" aria-hidden="true" focusable="false" width="2" height="12" viewBox="0 0 2 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white"/>
                 </svg>
+                <span class="visually-hidden">Показать дополнительную информацию</span>
               </button>
               <span class="modal-tooltip-text" id="modal-tooltip-text" role="tooltip">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
             </span>
           </label>
           <div class="modal-counter">
-            <button class="modal-button decrease" type="button"></button>
-            <input type="number" class="modal-counter-input" value="2" name="kids">
-            <button class="modal-button increase" type="button"></button>
+            <button class="modal-button decrease" type="button">
+              <span class="visually-hidden">Уменьшить на единицу</span>
+            </button>
+            <input type="number" class="modal-counter-input" value="2" name="kids" id="kids">
+            <button class="modal-button increase" type="button">
+              <span class="visually-hidden">Увеличить на единицу</span>
+            </button>
           </div>
           <button type="submit" class="modal-submit-button blue-button">Найти</button>
         </form>
