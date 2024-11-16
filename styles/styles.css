@@ -470,8 +470,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
-  ;
-  margin: 0;
+  margin: 0 auto;
   width: 230px;
 }
 
@@ -738,7 +737,7 @@ body {
 
 .filter-form {
   display: flex;
-  gap: 45px;
+  gap: 26px;
   flex-wrap: wrap;
 }
 
@@ -746,7 +745,7 @@ body {
   padding: 0;
   margin: 0;
   border: none;
-  min-width: 172px;
+  width: 200px;
 }
 
 .filter-title {
@@ -837,8 +836,8 @@ body {
 
 .filter-price {
   padding: 0;
-  padding-left: 77px;
-  padding-right: 25px;
+  padding-left: 59px;
+  padding-right: 44px;
   margin: 0;
   border: none;
 }
