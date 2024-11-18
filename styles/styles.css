@@ -431,7 +431,6 @@ body {
 .services-item {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   width: 400px;
   padding: 186px 85px 81px;
   box-sizing: border-box;
@@ -470,8 +469,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
-  ;
-  margin: 0;
+  margin: 0 auto;
   width: 230px;
 }
 
@@ -738,7 +736,7 @@ body {
 
 .filter-form {
   display: flex;
-  gap: 45px;
+  gap: 26px;
   flex-wrap: wrap;
 }
 
@@ -746,7 +744,7 @@ body {
   padding: 0;
   margin: 0;
   border: none;
-  min-width: 172px;
+  width: 200px;
 }
 
 .filter-title {
@@ -833,12 +831,13 @@ body {
 .control-label {
   font-size: 18px;
   line-height: 21px;
+  max-width: 200px;
 }
 
 .filter-price {
   padding: 0;
-  padding-left: 77px;
-  padding-right: 25px;
+  padding-left: 59px;
+  padding-right: 44px;
   margin: 0;
   border: none;
 }
@@ -954,12 +953,12 @@ body {
 .filter-buttons {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: start;
   width: 191px;
   box-sizing: border-box;
   border: none;
   margin: 0;
-  padding-top: 40px;
+  padding-top: 55px;
   padding-bottom: 0;
 }
 
@@ -968,6 +967,7 @@ body {
   line-height: 21px;
   background-color: #82b3d3;
   width: 191px;
+  margin-bottom: 18px;
 }
 
 .reset-button {
@@ -979,7 +979,7 @@ body {
 }
 
 .filtered {
-  padding: 46px 70px 60px;
+  padding: 48px 70px 60px;
 }
 
 .filtered-data {
@@ -1102,7 +1102,7 @@ body {
   grid-template-rows: 1fr;
   gap: 16px 20px;
   width: 340px;
-  padding: 24px 20px 20px 19px;
+  padding: 25px 20px 20px 19px;
   box-sizing: border-box;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
@@ -1118,11 +1118,15 @@ body {
   outline: none;
 }
 
-.filtered-card-link:focus .filtered-card-image {
+.filtered-card-link:hover .filtered-card-image,
+.filtered-card-link:focus .filtered-card-image,
+.filtered-card-link:active .filtered-card-image {
   opacity: 0.7;
 }
 
-.filtered-card-link:focus .filtered-card-title {
+.filtered-card-link:hover .filtered-card-title,
+.filtered-card-link:focus .filtered-card-title,
+.filtered-card-link:active .filtered-card-title {
   color: #756157;
 }
 
