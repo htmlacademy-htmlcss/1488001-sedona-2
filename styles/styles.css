@@ -214,6 +214,11 @@ body {
   outline: 2px solid #756157;
 }
 
+.site-menu-link:active {
+  opacity: 0.5;
+  outline: none;
+}
+
 .site-menu-link-current::after {
   content: "";
   width: 100%;
@@ -275,7 +280,13 @@ body {
 }
 
 .user-menu-link:focus {
+  outline-offset: -4px;
   outline: 2px solid #756157;
+}
+
+.user-menu-link:active {
+  outline: none;
+  opacity: 0.5;
 }
 
 .fav-number {
